@@ -2,6 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: "boldonse";
+    src: url("/fonts/Boldonse-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "bytesized";
+    src: url("/fonts/Bytesized-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "inconsolata";
+    src: url("/fonts/Inconsolata-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "press-start-2p";
+    src: url("/fonts/PressStart2P-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.h-128 {
+    height: 32rem;
+}
+
+.w-128 {
+    width: 32rem;
+}
+
+.w-112 {
+    width: 28rem;
+}
+
 @keyframes color-change {
     0% {
         color: black;
@@ -59,5 +99,40 @@
     100% {
         mask: linear-gradient(90deg, transparent 0%, white 100%);
         -webkit-mask: linear-gradient(90deg, transparent 0%, white 100%);
+    }
+}
+
+.swiper {
+    width: 600px;
+    height: 300px;
+}
+
+.typewriter {
+    overflow: hidden;
+    border-right: 0.15em solid black;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.15em;
+    animation:
+        typing 3.5s steps(40, end),
+        blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: black;
     }
 }
